@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 			{
 				putchar(va_arg(list, int));
 				i++;
+			}
 			else if (a == 's')
 			{
 				str = va_arg(list, const char *);
@@ -39,13 +40,13 @@ int _printf(const char *format, ...)
 			{
 
 			}
-			}
 		}
 		else
 		{
-			putchar(c);
+			putchar(a);
 			i++;
 		}
+		a = *format;
 	}
 	va_end(list);
 	return (i);
