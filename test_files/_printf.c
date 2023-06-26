@@ -5,6 +5,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	char a;
+	int n;
 	const char *str;
 	va_list list;
 	va_start(list, format);
@@ -38,6 +39,10 @@ int _printf(const char *format, ...)
 				putchar('%');
 				i++;
 			}
+			else if (a == 'd' || a == 'i' )                         {
+                                n = va_arg(list, int);
+                                digits(n);
+                                i++;                                            }
 			else
 			{
 
