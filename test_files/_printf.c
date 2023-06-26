@@ -6,6 +6,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	char a;
 	int n;
+	unsigned int b;
 	const char *str;
 	va_list list;
 	va_start(list, format);
@@ -43,6 +44,10 @@ int _printf(const char *format, ...)
                                 n = va_arg(list, int);
                                 digits(n);
                                 i++;                                            }
+			else if (a == 'b')
+                        {
+                                b = va_arg(list, unsigned int);                                                                                 i += binary(b);
+                        }
 			else
 			{
 
