@@ -4,7 +4,7 @@ void digits(int n)
 {
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = -n;
 	}
 
@@ -13,5 +13,5 @@ void digits(int n)
 		digits(n / 10);
 	}
 
-	putchar('0' + n % 10);
+	_putchar('0' + n % 10);
 }
